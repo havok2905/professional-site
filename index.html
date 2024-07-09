@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* RESET CSS */
+  
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+  
+      /* CUSTOM STYLES */
+      :root {
+        /* BORDERS */
+        --border-radius: 0.5rem;
+
+        /* COLORS */
+        --background-color: #111111;
+        --link-color: #5e8de6;
+        --text-color: #e7e7e7;
+
+        /* FONT WEIGHT */
+        --font-weight-bold: 700;
+
+        /* SHADOW */
+        --shadow: 0 0 1.25rem 0 #000000;
+
+        /* SPACING SIZES */
+        --spacing-standard: 1.5rem;
+        --spacing-large: 3rem;
+  
+        /* TEXT SIZES */
+        --root-size: 16px;
+        --body-text-size: 1rem;
+        --h1-size: 4rem;
+        --h1-sub-size: 3rem;
+        --h2-size: 2rem;
+      }
+  
+      html {
+        /* Root for rem sizing */
+        font-size: var(--root-size);
+      }
+  
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: monospace;
+        font-size: var(--body-text-size);
+        margin-bottom: var(--spacing-large);
+      }
+  
+      h1 {
+        font-size: var(--h1-size);
+        margin-bottom: var(--h1-size);
+      }
+  
+      h1 span {
+        display: block;
+        font-size: var(--h1-sub-size);
+      }
+  
+      h2 {
+        font-size: var(--h2-size);
+        margin-bottom: var(--h2-size);
+      }
+  
+      a {
+        color: var(--link-color);
+      }
+
+      p {
+        line-height: 1.5;
+        margin-bottom: var(--spacing-standard);
+      }
+  
+      li {
+        line-height: 1.5;
+        margin-bottom: var(--spacing-standard);
+      }
+
+      code {
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+      }
+
+      code * {
+        line-height: 1.5;
+      }
+
+      strong {
+        font-weight: var(--font-weight-bold);
+      }
+
+      nav {
+        position: absolute;
+        right: var(--spacing-standard);
+        top: var(--spacing-standard);
+      }
+  
+      .grid {
+        display: grid;
+        gap: var(--spacing-large);
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .screen-reader-only {
+        height:1px;
+        left:-10000px;
+        overflow:hidden;
+        position:absolute;
+        top:auto;
+        width:1px;
+      }
+
+      .section {
+        margin: var(--spacing-standard);
+        max-width: 900px;
+      }
+
+      @media (max-width: 1250px) {
+        nav {
+          margin-left: var(--spacing-standard);
+          margin-top: var(--spacing-standard);
+          position: static;
+        }
+
+        .grid {
+          display: block;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"
+    />
+    <script
+      src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js">
+    </script>
+    <script
+      src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/languages/typescript.min.js">
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightElement(block);
+        });
+      });
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "alternateName": "Chris McLean",
+        "alumniOf": [
+          "The University of Central Florida",
+          "Shopify",
+          "Healthgrades",
+          "Red Ventures",
+          "Broadnet",
+          "Applied Systems",
+          "Cloudspace",
+          "UniKey Technologies",
+          "The University of Central Florida - Center for Distributed Learning"
+        ],
+        "familyName": "McLean",
+        "givenName": "Christopher",
+        "jobTitle": "Senior Software Engineer",
+        "knowsAbout": [
+          "JavaScript",
+          "Typescript",
+          "HTML",
+          "CSS",
+          "Node",
+          "React",
+          "Ruby",
+          "C#",
+          "Web Development",
+          "Web Accessibility",
+          "SEO",
+          "Automated Testing",
+          "Software Architecture",
+          "Software Engineering",
+          "UX Design"
+        ],
+        "name": "Christopher McLean"
+      }
+    </script>
+    <title>Chris McLean - Frontend Software Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="#">
+          Download Resume
+        </a>
+      </nav>
+      <div class="section">
+        <h1>
+          Hey, I'm Chris,
+          <span>
+            Frontend Software Engineer
+          </span>
+        </h1>
+      </div>
+      <div class="screen-reader-only">
+        <p>
+          I have over a decade's worth of experience developing software for the web.
+        </p>
+        <dl>
+          <dt>
+            Current Title
+          </dt>
+          <dd>
+            Senior Software Engineer
+          </dd>
+          <dt>
+            Tooling
+          </dt>
+          <dd>
+            <ul>
+              <li>Typescript</li>
+              <li>CSS</li>
+              <li>React</li>
+              <li>Node</li>
+              <li>Ruby</li>
+              <li>C#</li>
+            </ul>
+          </dd>
+          <dt>
+            Focus
+          </dt>
+          <dd>
+            <ul>
+              <li>Architecture</li>
+              <li>Project Health</li>
+              <li>Testing</li>
+              <li>Accessibility</li>
+            </ul>
+          </dd>
+          <dt>
+            Experience
+          </dt>
+          <dd>
+            <ul>
+              <li>Shopify</li>
+              <li>Healthgrades</li>
+              <li>Applied Systems</li>
+              <li>UniKey Technologies</li>
+              <li>Cloudspace</li>
+              <li>The University of Central Florida - Center for Distributed Learning</li>
+            </ul>
+          </dd>
+          <dt>
+            Education
+          </dt>
+          <dd>
+            BA in Digital Media, The University of Central Florida
+          </dd>
+        </dl>
+      </div>
+      <div class="grid">
+        <div class="section">
+          <pre>
+            <code class="language-typescript">/** 
+ * @description I have over a decade's worth of experience
+ * developing software for the web
+ */
+export const engineer: Engineer = {
+  currentTitle: 'Senior Software Engineer',
+  tooling: [
+    'Typescript',
+    'CSS',
+    'React',
+    'Node',
+    'Ruby',
+    'C#'
+  ],
+  focus: [
+    'Architecture',
+    'Project Health',
+    'Testing',
+    'Accessibility'
+  ],
+  experience: [
+    'Shopify',
+    'Healthgrades',
+    'Applied Systems',
+    'Broadnet',
+    'UniKey Technologies',
+    'Cloudspace',
+    'The University of Central Florida - Center for Distributed Learning'
+  ],
+  educations: {
+    degree: 'BA in Digital Media',
+    university: 'The University of Central Florida'
+  }
+};</code>
+          </pre>
+        </div>
+        <div class="section">
+          <h2>
+            Open Source
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/havok2905/dm-screen"
+                target="_blank">dm-screen:
+              </a> A virtual DM screen and CMS for managing in person D&D sessions, players, D&D creatures, collectable items.
+            </li>
+            <li>
+              <a
+                href="https://github.com/havok2905/character-editor"
+                target="_blank">
+                character-editor:
+              </a> A type system for working with DND 5th eddition and PDF/HTML generation of character/creature sheets.
+            </li>
+            <li>
+              <a
+                href="https://github.com/havok2905/token-builder"
+                target="_blank">
+                token-builder:
+              </a> CLI tool to convert a directory of images into digital tokens for virtual TTRPG tabletop games.
+            </li>
+          </ul>
+          <h2>
+            Reading List
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.goodreads.com/book/show/18043011-clean-architecture"
+                target="_blank">
+                Clean Architecture, Robert C Martin
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby"
+                target="_blank">
+                POODR, Sandi Metz
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.goodreads.com/book/show/67825.Peopleware"
+                target="_blank">
+                Peopleware, Tom DeMarco
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things"
+                target="_blank">
+                The Design of Everyday Things, Don Norman
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=URSWYvyc42M"
+                target="_blank">
+                The Magic Tricks of Testing, Sandi Metz
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
