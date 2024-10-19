@@ -91,7 +91,6 @@
   
       h1 {
         font-size: var(--h1-size);
-        margin-bottom: var(--h1-size);
       }
   
       h1 span {
@@ -132,15 +131,8 @@
       }
 
       nav {
-        position: absolute;
-        right: var(--spacing-standard);
-        top: var(--spacing-standard);
-      }
-  
-      .grid {
-        display: grid;
-        gap: var(--spacing-large);
-        grid-template-columns: 1fr 1fr;
+        margin-left: var(--spacing-standard);
+        margin-top: var(--spacing-standard);
       }
 
       .screen-reader-only {
@@ -153,20 +145,9 @@
       }
 
       .section {
-        margin: var(--spacing-standard);
+        margin: 0 auto;
         max-width: 900px;
-      }
-
-      @media (max-width: 1250px) {
-        nav {
-          margin-left: var(--spacing-standard);
-          margin-top: var(--spacing-standard);
-          position: static;
-        }
-
-        .grid {
-          display: block;
-        }
+        padding: var(--spacing-standard);
       }
     </style>
     <link
@@ -299,112 +280,110 @@
           </dd>
         </dl>
       </div>
-      <div class="grid">
-        <div class="section">
-          <pre>
-            <code class="language-typescript">/** 
- * @description I have over a decade's worth of experience
- * developing software for the web
- */
+      <div class="section">
+        <pre>
+          <code class="language-typescript">/** 
+* @description I have over a decade's worth of experience
+* developing software for the web
+*/
 export const engineer: Engineer = {
-  currentTitle: 'Senior Software Engineer',
-  tooling: [
-    'Typescript',
-    'CSS',
-    'React',
-    'Node',
-    'Ruby',
-    'C#'
-  ],
-  focus: [
-    'Architecture',
-    'Project Health',
-    'Testing',
-    'Accessibility'
-  ],
-  experience: [
-    'Shopify',
-    'Healthgrades',
-    'Applied Systems',
-    'Broadnet',
-    'UniKey Technologies',
-    'Cloudspace',
-    'The University of Central Florida - Center for Distributed Learning'
-  ],
-  educations: {
-    degree: 'BA in Digital Media',
-    university: 'The University of Central Florida'
-  }
+currentTitle: 'Senior Software Engineer',
+tooling: [
+  'Typescript',
+  'CSS',
+  'React',
+  'Node',
+  'Ruby',
+  'C#'
+],
+focus: [
+  'Architecture',
+  'Project Health',
+  'Testing',
+  'Accessibility'
+],
+experience: [
+  'Shopify',
+  'Healthgrades',
+  'Applied Systems',
+  'Broadnet',
+  'UniKey Technologies',
+  'Cloudspace',
+  'The University of Central Florida - Center for Distributed Learning'
+],
+educations: {
+  degree: 'BA in Digital Media',
+  university: 'The University of Central Florida'
+}
 };</code>
-          </pre>
-        </div>
-        <div class="section">
-          <h2>
-            Open Source
-          </h2>
-          <ul>
-            <li>
-              <a
-                href="https://github.com/havok2905/dm-screen"
-                target="_blank">dm-screen:
-              </a> A virtual DM screen and CMS for managing in person D&D sessions, players, D&D creatures, collectable items.
-            </li>
-            <li>
-              <a
-                href="https://github.com/havok2905/character-editor"
-                target="_blank">
-                character-editor:
-              </a> A type system for working with DND 5th eddition and PDF/HTML generation of character/creature sheets.
-            </li>
-            <li>
-              <a
-                href="https://github.com/havok2905/token-builder"
-                target="_blank">
-                token-builder:
-              </a> CLI tool to convert a directory of images into digital tokens for virtual TTRPG tabletop games.
-            </li>
-          </ul>
-          <h2>
-            Reading List
-          </h2>
-          <ul>
-            <li>
-              <a
-                href="https://www.goodreads.com/book/show/18043011-clean-architecture"
-                target="_blank">
-                Clean Architecture, Robert C Martin
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby"
-                target="_blank">
-                POODR, Sandi Metz
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.goodreads.com/book/show/67825.Peopleware"
-                target="_blank">
-                Peopleware, Tom DeMarco
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things"
-                target="_blank">
-                The Design of Everyday Things, Don Norman
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/watch?v=URSWYvyc42M"
-                target="_blank">
-                The Magic Tricks of Testing, Sandi Metz
-              </a>
-            </li>
-          </ul>
-        </div>
+        </pre>
+      </div>
+      <div class="section">
+        <h2>
+          Open Source
+        </h2>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/havok2905/dm-screen"
+              target="_blank">dm-screen:
+            </a> A virtual DM screen and CMS for managing in person D&D sessions, players, D&D creatures, collectable items.
+          </li>
+          <li>
+            <a
+              href="https://github.com/havok2905/character-editor"
+              target="_blank">
+              character-editor:
+            </a> A type system for working with DND 5th eddition and PDF/HTML generation of character/creature sheets.
+          </li>
+          <li>
+            <a
+              href="https://github.com/havok2905/token-builder"
+              target="_blank">
+              token-builder:
+            </a> CLI tool to convert a directory of images into digital tokens for virtual TTRPG tabletop games.
+          </li>
+        </ul>
+        <h2>
+          Reading List
+        </h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.goodreads.com/book/show/18043011-clean-architecture"
+              target="_blank">
+              Clean Architecture, Robert C Martin
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby"
+              target="_blank">
+              POODR, Sandi Metz
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.goodreads.com/book/show/67825.Peopleware"
+              target="_blank">
+              Peopleware, Tom DeMarco
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things"
+              target="_blank">
+              The Design of Everyday Things, Don Norman
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=URSWYvyc42M"
+              target="_blank">
+              The Magic Tricks of Testing, Sandi Metz
+            </a>
+          </li>
+        </ul>
       </div>
     </main>
   </body>
